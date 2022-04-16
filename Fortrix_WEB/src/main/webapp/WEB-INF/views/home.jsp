@@ -8,8 +8,13 @@
 </head>
 <body>
 <%@ include file="include/menu.jsp" %>
-<P> The time on the server is ${serverTime}. 
+<br>
+
+<h6>HOME TEST</h6>
+<br>
+<br>
+<P>
+ The time on the server is ${serverTime}. 
 </P>
- ${result}
 </body>
 </html>

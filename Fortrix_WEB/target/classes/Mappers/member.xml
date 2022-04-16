@@ -3,7 +3,7 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.fortrix.dao.MemberDAO">
- <select id="login_check" resultType="String">
+ <select id="login_check" resultType="com.fortrix.dto.MemberDTO">
   select NAME
   from membertb
   where ID=#{mb_id} and PW=#{mb_pw}
