@@ -3,11 +3,12 @@ package com.fortrix.service;
 import javax.servlet.http.HttpSession;
 
 import com.fortrix.dao.MemberDAO;
+import com.fortrix.dao.MemberDAOImpl;
 import com.fortrix.dto.MemberDTO;
 
 public class MemberServiceImpl implements MemberService{
 
-	MemberDAO memberDao;
+	MemberDAOImpl memberDao;
 	@Override
 	public String loginCheck(MemberDTO dto, HttpSession session) {
 		// TODO Auto-generated method stub
