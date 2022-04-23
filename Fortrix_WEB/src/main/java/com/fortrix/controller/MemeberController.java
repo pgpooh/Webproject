@@ -6,7 +6,9 @@ import java.sql.DriverManager;
 import javax.inject.Inject;
 import javax.servlet.http.HttpSession;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestHeader;
@@ -25,7 +27,7 @@ import com.fortrix.service.MemberServiceImpl;
 public class MemeberController {
 	 MemberServiceImpl memberService = new MemberServiceImpl();
 	 
-	private Logger logger = Logger.getLogger(MemeberController.class);
+	private Logger logger = LogManager.getLogger(MemeberController.class);
 	@Inject
 	 // menu.do를 클릭하면 views/member/login.jsp로 이동 
 	//@RequestHeader(value="User-Agent", defaultValue="myBrowser") String userAgent
@@ -35,8 +37,13 @@ public class MemeberController {
 	  return "member/login";
 	}
 
-	@RequestMapping(value= "login_check.do", method = RequestMethod.POST)
-	public ModelAndView login_check(@ModelAttribute MemberDTO dto, HttpSession session,@RequestHeader(value="User-Agent", defaultValue="myBrowser") String userAgent, @RequestParam("userid") String id, @RequestParam("passwd") String pwd) throws Exception {
+	@RequestMapping(value= "login_check.do")
+	public ModelAndView login_check( @RequestParam("userid") String id, @RequestParam("passwd") String pwd/*
+									 * @ModelAttribute MemberDTO dto, HttpSession
+									 * session,@RequestHeader(value="User-Agent", defaultValue="myBrowser") String
+									 * userAgent, @RequestParam("userid") String id, @RequestParam("passwd") String
+									 * pwd
+									 */) throws Exception {
 		
 				
 
@@ -45,7 +52,7 @@ public class MemeberController {
 	 dto1.setMb_id(id);
 	 dto1.setMb_pw(pwd);
 
-	 String name = memberService.loginCheck(dto1, session);
+	 String name = memberService.loginCheck(dto1);
 	 
 	 ModelAndView mav = new ModelAndView();
 	  if (name != null) { // 로그인 성공 시

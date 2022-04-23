@@ -1,14 +1,21 @@
 package com.fortrix.dao;
 
+import javax.inject.Inject;
+
 import org.apache.ibatis.session.SqlSession;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import com.fortrix.dto.MemberDTO;
 
-public class MemberDAOImpl {
-SqlSession sqlSession;
+@Repository
+public class MemberDAOImpl implements MemberDAO {
+	//@Autowired
+	SqlSession sqlSession;
 
+	
 public String loginCheck(MemberDTO dto) {
-	return sqlSession.selectOne("member.login_check", dto);
+	return sqlSession.selectOne("member.login", dto);
 }
 
 }
