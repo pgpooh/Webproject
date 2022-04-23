@@ -3,13 +3,14 @@ package com.fortrix.service;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import com.fortrix.dao.MemberDAO;
 import com.fortrix.dao.MemberDAOImpl;
 import com.fortrix.dto.MemberDTO;
 
-@Component
+@Repository
 public class MemberServiceImpl implements MemberService{
 
 	MemberDAOImpl memberDao = new MemberDAOImpl();

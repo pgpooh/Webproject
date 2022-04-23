@@ -9,7 +9,9 @@ import javax.servlet.http.HttpSession;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,6 +27,7 @@ import com.fortrix.service.MemberServiceImpl;
 @Controller // 컨트롤러 빈으로 등록 
 @RequestMapping("/member/*")
 public class MemeberController {
+	@Autowired
 	 MemberServiceImpl memberService = new MemberServiceImpl();
 	 
 	private Logger logger = LogManager.getLogger(MemeberController.class);

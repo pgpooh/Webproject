@@ -10,12 +10,14 @@ import com.fortrix.dto.MemberDTO;
 
 @Repository
 public class MemberDAOImpl implements MemberDAO {
-	//@Autowired
+	//@Autowired 
+	//@Inject
 	SqlSession sqlSession;
 
 	
 public String loginCheck(MemberDTO dto) {
-	return sqlSession.selectOne("member.login", dto);
+	return sqlSession.selectOne
+			("member.login", dto);
 }
 
 }
