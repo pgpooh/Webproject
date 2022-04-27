@@ -8,7 +8,8 @@
 $(function(){
 $("#btnLogin").click(function(){
  userid=$("#userid").val();
- var passwd=$("#passwd").val(); if(userid == ""){
+ var passwd=$("#passwd").val(); 
+ if(userid == ""){
   alert("아이디를 입력하세요");
   $("#userid").focus(); //입력포커스 이동
 
@@ -38,12 +39,12 @@ if(passwd==""){
 </tr>
 <tr>
  <td>비밀번호</td>
- <td><input type="password" id="passwd" name="passwd"></td>
+ <td><input type="password" id="userpwd" name="userpwd"></td>
 </tr>
 <tr>
  <td colspan="2" align="center">
  <button type="button" id="btnLogin">로그인 </button>
- <c:if test="${message == 'error'}">
+ <c:if test="${message == 'failure'}">
  <div style="color:red;"> 아이디 또는 비밀번호가 일치하지 않습니다.
  </div>
 </c:if>

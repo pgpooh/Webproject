@@ -16,5 +16,10 @@
 <P>
  The time on the server is ${serverTime}. 
 </P>
+<h1>Main</h1> 
+<a href="/html/memJoin.do">JOIN</a>    
+<a href="/html/login.html">LOGIN</a>
+
+
 </body>
 </html>

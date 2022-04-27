@@ -8,4 +8,35 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-ma
   from membertb
   where ID=#{mb_id} and PW=#{mb_pw}
  </select>
+ 
+ 
+ 
 </mapper>
+
+<!-- <mapper namespace="com.sample.dao.MemberMapper"> -->
+ 
+<!-- select 추출된 컬럼값들을 저장할 resultType을 지정함 -->
+<!--     <select id="testDbList" resultType="memberVO"> -->
+<!--         SELECT ID,PW -->
+<!--         FROM membertb -->
+<!--         WHERE -->
+<!--         	ID = #{userid} and PW=#{userpwd} -->
+<!--     </select> -->
+<!-- </mapper> -->
+
+<!-- <mapper namespace="member"> -->
+
+<!-- <select id="loginCheck" resultType="String"> -->
+<!-- SELECT user_name AS NAME FROM membertb WHERE ID = #{userid} and PW=#{userpwd} -->
+<!-- </select> -->
+
+<!--   <select id="testDbList" resultType="com.sample.vo.memberVO"> -->
+<!--         SELECT user_name AS NAME, -->
+<!--         	user_id AS ID, -->
+<!--         	user_pws AS PW -->
+<!--         FROM membertb -->
+<!--         WHERE -->
+<!--         	ID = #{userid} and PW=#{userpwd} -->
+<!--     </select> -->
+<!-- </mapper> -->
+

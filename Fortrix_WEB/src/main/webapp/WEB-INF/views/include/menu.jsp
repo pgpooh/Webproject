@@ -12,7 +12,7 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">TESTCASE1</a>
+          <a class="nav-link active" aria-current="page" href="/webproject/member/login_member.do">TESTCASE1_re</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">TESTCASE2</a>
@@ -25,16 +25,15 @@
             TESTCASE3
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="#">TEST1</a></li>
+            <li><a class="dropdown-item" href="#">TEST1re</a></li>
             <li><a class="dropdown-item" href="#">TEST2</a></li>
             <li><a class="dropdown-item" href="#">TEST3</a></li>
            
           </ul>
         </li>
          </ul>
+        
     </div>
   </div>
 </nav>
 
-
-<div class="container">

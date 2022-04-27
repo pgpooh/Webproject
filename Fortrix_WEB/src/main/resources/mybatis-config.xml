@@ -4,11 +4,11 @@
 
 <configuration>
     <typeAliases>
-          <typeAlias alias="MemberDTO" type="com.fortrix.dto.MemberDTO" />
+          <typeAlias type="com.fortrix.dto.MemberDTO" alias="MemberDTO"/>
     </typeAliases>
     
     <mappers>
-		<mapper resource="/Mappers/member.xml" />
+		<mapper resource="Mappers/member.xml" />
 	
 	</mappers>
 </configuration>

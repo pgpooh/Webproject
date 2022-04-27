@@ -9,6 +9,8 @@
 
 <body>
 <%@ include file="../include/menu.jsp" %>
+<body>
+<%@ include file="../include/menu.jsp" %>
 <form name="form1" method="post">
 <h3>Login TEST</h3>
 사용자 아이디: ${sessionScope.home.mb_id } <br/>
