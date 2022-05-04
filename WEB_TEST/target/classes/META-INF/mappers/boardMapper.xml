@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
  
-<mapper namespace="com.fortrix.web_test.boardMapper">
+<mapper namespace="Login">
  
-    <select id="getBoardList" parameterType="com.fortrix.web_test.form.BoardForm" resultType="com.spring.board.dto.BoardDto">
+    <select id="Logintest" parameterType="com.fortrix.web_test.form.BoardForm" resultType="com.fortrix.web_test.dto.BoardDto">
     
        SELECT IDX, ID, NAME, PW FROM user_table.membertb
     

@@ -23,7 +23,14 @@ public class BoardForm {
 	 public String getNAME() {
 		 return NAME;
 	 }
-	 public void setName(String NAME) {
+	 public void setNAME(String NAME) {
 		 this.NAME = NAME;
+	 }
+	 
+	 public String getPW() {
+		 return PW;
+	 }
+	 public void setPW(String PW) {
+		 this.PW = PW;
 	 }
 }
